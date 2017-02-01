@@ -30,8 +30,8 @@ gulp.task('browser-sync', function() {
 // });
 
 gulp.task('watch', ['browser-sync', 'sass', 'html'], function() {
-    gulp.watch('assets/scss/**/*.scss', ['sass']);
-    gulp.watch('assets/**/*.html', ['html']);
+    gulp.watch('assets/scss/**/*.scss', ['sass', browserSync.reload]);
+    gulp.watch('assets/**/*.html', ['html', browserSync.reload]);
     gulp.watch('assets/js/**/*.js', browserSync.reload);
 });
 
@@ -52,8 +52,7 @@ gulp.task('sass', function() {
     return gulp.src('assets/scss/**/*.scss')
         .pipe(sass())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('assets/css'))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(gulp.dest('assets/css'));
 });
 
 
@@ -79,8 +78,7 @@ gulp.task('build', ['clean', 'img', 'sass'], function() {
 gulp.task('html', function() {
     gulp.src('assets/parts/index.html')
         .pipe(rigger())
-        .pipe(gulp.dest('assets'))
-        .pipe(browserSync.reload)
+        .pipe(gulp.dest('assets'));
 })
 
 gulp.task('clear', function() {

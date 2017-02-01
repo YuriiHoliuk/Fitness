@@ -1,0 +1,21 @@
+.features {
+    &__row {
+        display: flex;
+        &:nth-child(3) {
+            .features__block {
+                min-height: 330px;
+            }
+        }
+    }
+    &__block {
+        flex-grow: 0;
+        flex-shrink: 1;
+        min-height: 394px;
+    }
+    &__block_small {
+        flex-basis: (100% / 3);
+    }
+    &__block_big {
+        flex-basis: (100% / 3) * 2;
+    }
+}
