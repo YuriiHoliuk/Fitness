@@ -2,3 +2,4 @@ node_modules
 assets/libs
 *.log
 *.psd
+.vscode
