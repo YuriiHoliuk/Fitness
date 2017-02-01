@@ -1,0 +1,16 @@
+.nav{
+	margin: 0 auto;
+	position: fixed;
+	float: right;
+	right: 1%;
+	top: 9%;
+}
+.nav__list{
+	display: inline;
+	padding-right: 52px;
+}
+.nav__link{
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
