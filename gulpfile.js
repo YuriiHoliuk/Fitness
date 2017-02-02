@@ -49,10 +49,12 @@ gulp.task('img', function() {
 
 
 gulp.task('sass', function() {
-    return gulp.src('assets/scss/**/*.scss')
-        .pipe(sass())
-        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('assets/css'));
+    setTimeout(function() {
+        return gulp.src('assets/scss/main.scss')
+            .pipe(sass())
+            .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+            .pipe(gulp.dest('assets/css'));
+    }, 1000);
 });
 
 
