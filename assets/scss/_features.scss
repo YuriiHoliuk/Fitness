@@ -1,7 +1,7 @@
 .features {
     &__row {
         display: flex;
-        &:nth-child(3) {
+        &:nth-child(2n+3) {
             .features__block {
                 min-height: 330px;
             }
@@ -13,9 +13,9 @@
         min-height: 394px;
     }
     &__block_small {
-        flex-basis: (100% / 3);
+        flex-basis: (401px / 1180px) * 100%;
     }
     &__block_big {
-        flex-basis: (100% / 3) * 2;
+        flex-basis: (779px / 1180px) * 100%;
     }
 }

@@ -1,0 +1,81 @@
+.text-block {
+    text-align: left;
+    padding: 55px (52px / 1180px * 100%) 0;
+    // &.features__block_small {
+    //     padding: 55px (52px / 401px * 100%) 0;
+    // }
+    // &.features__block_big {
+    //     padding: 55px (52px / 779px * 100%) 0;
+    // }
+    background-color: #fff;
+    position: relative;
+    @extend %before;
+    &_center {
+        text-align: center;
+        .text-block__headline {
+            margin-bottom: 0;
+            padding-bottom: 68px;
+            position: relative;
+            @extend %before;
+            &::before {
+                content: url('../img/drop_small_gray.png');
+                top: 50px;
+                @extend %vam;
+            }
+        }
+    }
+    &_green {
+        background-color: $maincolor;
+        .text-block__headline,
+        .text-block__subheadline,
+        .text-block__description {
+            color: #fff;
+        }
+    }
+    &_man {
+        &::before {
+            content: url('../img/man.png');
+            top: 56px;
+            right: 28px;
+        }
+    }
+    &_strawberry {
+        &::before {
+            content: url('../img/strawberry.png');
+            top: 56px;
+            right: 47px;
+        }
+    }
+    &_avocado {
+        &::before {
+            content: url('../img/avocado.png');
+            top: 56px;
+            right: 34px;
+        }
+    }
+    &_shadow {
+        box-shadow: 0 0 62px #000;
+    }
+    &__headline {
+        font-size: $head2-fz;
+        font-weight: 300;
+        color: $maincolor;
+        text-transform: uppercase;
+        margin-bottom: 37px;
+    }
+    &__subheadline {
+        font-family: $secondfont;
+        color: $secondcolor;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+    &__description {
+        color: $textcolor;
+        margin-bottom: 8px;
+        line-height: (26 / 14);
+    }
+    &__more {
+        color: $maincolor;
+        border-bottom: 1px solid $maincolor;
+    }
+}

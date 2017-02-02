@@ -1,0 +1,19 @@
+%before {
+    &::before {
+        position: absolute;
+        display: block;
+        content: '';
+    }
+}
+
+%vam {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+%ham {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

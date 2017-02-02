@@ -1,7 +1,51 @@
 .photo-block {
+    position: relative;
     @for $i from 1 through 6 {
         &_#{$i} {
             background: url('../img/feature_photo_#{$i}.jpg') 0 0 no-repeat;
+        }
+    }
+    &__label {
+        font-size: $small-fz;
+        color: #fff;
+        position: absolute;
+        span {
+            color: $secondcolor;
+        }
+        &_white {
+            text-transform: uppercase;
+        }
+        &_drop {
+            @extend %before;
+            padding-right: 32px;
+            &::before {
+                content: url('../img/drop_small_red.png');
+                top: -60%;
+                right: 0;
+            }
+        }
+        &_bottom-left {
+            left: 50px;
+            bottom: 45px;
+        }
+        &_bottom-right {
+            right: 41px;
+            bottom: 45px;
+        }
+        &_top-left {
+            top: 62px;
+            left: 59px;
+        }
+        &_top-right {
+            top: 62px;
+            right: 58px;
+            padding-right: 31px;
+            @extend %before;
+            &::before {
+                content: url('../img/label.png');
+                right: 0;
+                top: -50%;
+            }
         }
     }
 }
