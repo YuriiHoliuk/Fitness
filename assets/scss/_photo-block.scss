@@ -1,18 +1,24 @@
 .photo-block {
-    position: relative;
+    display: flex;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
     @for $i from 1 through 6 {
         &_#{$i} {
-            background: url('../img/feature_photo_#{$i}.jpg') 0 0 no-repeat;
+            background-image: url('../img/feature_photo_#{$i}.jpg');
+            @include tablet-portrait-down {
+                order: $i * 2;
+            }
         }
     }
     &__label {
         font-size: $small-fz;
         color: #fff;
-        position: absolute;
         span {
             color: $secondcolor;
         }
         &_white {
+            font-family: $secondfont;
             text-transform: uppercase;
         }
         &_drop {
@@ -20,31 +26,37 @@
             padding-right: 32px;
             &::before {
                 content: url('../img/drop_small_red.png');
-                top: -60%;
                 right: 0;
+                @extend %vam;
             }
         }
         &_bottom-left {
-            left: 50px;
-            bottom: 45px;
+            align-self: flex-end;
+            margin-left: (50px / 779px) * 100%;
+            margin-bottom: (45px / 779px) * 100%;
         }
         &_bottom-right {
-            right: 41px;
-            bottom: 45px;
+            align-self: flex-end;
+            margin-left: auto;
+            margin-right: (41px / 779px) * 100%;
+            margin-bottom: (45px / 779px) * 100%;
         }
         &_top-left {
-            top: 62px;
-            left: 59px;
+            align-self: flex-start;
+            margin-top: (62px / 779px) * 100%;
+            margin-left: (59px / 779px) * 100%;
         }
         &_top-right {
-            top: 62px;
-            right: 58px;
+            align-self: flex-start;
+            margin-left: auto;
+            margin-top: (62px / 779px) * 100%;
+            margin-right: (58px / 779px) * 100%;
             padding-right: 31px;
             @extend %before;
             &::before {
                 content: url('../img/label.png');
                 right: 0;
-                top: -50%;
+                @extend %vam;
             }
         }
     }

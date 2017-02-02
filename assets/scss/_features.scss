@@ -1,21 +1,33 @@
 .features {
-    &__row {
-        display: flex;
-        &:nth-child(2n+3) {
-            .features__block {
-                min-height: 330px;
-            }
-        }
+    display: flex;
+    flex-flow: row wrap;
+    @include tablet-portrait-down {
+        flex-flow: column nowrap;
     }
     &__block {
         flex-grow: 0;
         flex-shrink: 1;
         min-height: 394px;
-    }
-    &__block_small {
-        flex-basis: (401px / 1180px) * 100%;
-    }
-    &__block_big {
-        flex-basis: (779px / 1180px) * 100%;
+        &_short {
+            min-height: 330px;
+        }
+        &_small {
+            width: (401px / 1180px) * 100%;
+        }
+        &_big {
+            width: (779px / 1180px) * 100%;
+        }
+        @include tablet-landscape-down {
+            &_big,
+            &_small {
+                width: 50%;
+            }
+        }
+        @include tablet-portrait-down {
+            &_big,
+            &_small {
+                width: 100%;
+            }
+        }
     }
 }

@@ -1,26 +1,26 @@
 .text-block {
     text-align: left;
     padding: 55px (52px / 1180px * 100%) 0;
-    // &.features__block_small {
-    //     padding: 55px (52px / 401px * 100%) 0;
-    // }
-    // &.features__block_big {
-    //     padding: 55px (52px / 779px * 100%) 0;
-    // }
     background-color: #fff;
-    position: relative;
+    @for $i from 0 through 5 {
+        &_#{$i} {
+            @include tablet-portrait-down {
+                order: 1 + $i * 2;
+            }
+        }
+    }
     @extend %before;
     &_center {
         text-align: center;
         .text-block__headline {
             margin-bottom: 0;
-            padding-bottom: 68px;
-            position: relative;
+            padding-bottom: 47px;
+            margin-bottom: 21px;
             @extend %before;
             &::before {
                 content: url('../img/drop_small_gray.png');
-                top: 50px;
-                @extend %vam;
+                bottom: 0;
+                @extend %ham;
             }
         }
     }
