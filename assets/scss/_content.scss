@@ -6,7 +6,7 @@
         padding-right: ($page-pad / 2);
     }
     @include phone-only {
-        padding-left: ($page-pad / 3);
-        padding-right: ($page-pad / 3);
+        padding-left: 0;
+        padding-right: 0;
     }
 }

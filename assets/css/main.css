@@ -255,8 +255,8 @@ input {
       padding-right: 6.5%; } }
   @media only screen and (max-width: 599px) {
     .content {
-      padding-left: 4.33333%;
-      padding-right: 4.33333%; } }
+      padding-left: 0;
+      padding-right: 0; } }
 
 .features {
   display: -webkit-box;
