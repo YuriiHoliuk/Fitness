@@ -44,7 +44,7 @@ gulp.task('img', function() {
             svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('assets/img'));
+        .pipe(gulp.dest('img'));
 });
 
 
