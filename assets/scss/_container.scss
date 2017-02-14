@@ -1,0 +1,16 @@
+.container {
+    padding-left: $page-pad / 1.5;
+    padding-right: $page-pad / 1.5;
+    @include tablet-landscape-down {
+        padding-left: $page-pad / 2;
+        padding-right: $page-pad / 2;
+    }
+    @include tablet-portrait-down {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @include big-desktop-up {
+        padding-left: $page-pad;
+        padding-right: $page-pad;
+    }
+}

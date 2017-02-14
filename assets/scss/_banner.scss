@@ -1,0 +1,22 @@
+.banner {
+    height: 100vh;
+    padding-top: 1px;
+    background-image: url('../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    &__headline {
+        font-size: 4.5rem;
+        letter-spacing: -0.4px;
+        text-align: center;
+        margin-top: 4.4222222em;
+        margin-bottom: 0.8222222em;
+    }
+    &__text {
+        font-size: 1.6rem;
+        line-height: 1.44;
+        letter-spacing: 0.2px;
+        text-align: center;
+    }
+}

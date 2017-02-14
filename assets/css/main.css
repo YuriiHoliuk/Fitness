@@ -177,6 +177,9 @@ input {
 .document {
   font-size: 62.5%;
   line-height: 1.71428571; }
+  @media only screen and (min-width: 1600px) {
+    .document {
+      font-size: 0.625vw; } }
 
 .page {
   font-family: "Open Sans", sans-serif;
@@ -222,7 +225,7 @@ input {
   text-transform: uppercase; }
 
 .logo {
-  font-size: 24px;
+  font-size: 2.4rem;
   letter-spacing: 2.4px;
   color: #fff;
   margin-left: 52px;
@@ -244,7 +247,7 @@ input {
   padding-right: 65px; }
 
 .nav-list__link {
-  font-size: 13px;
+  font-size: 1.3rem;
   line-height: 1.85;
   letter-spacing: 1px;
   text-align: right;
@@ -263,11 +266,11 @@ input {
   margin-left: 7.3125vh;
   text-transform: uppercase; }
   .tagline__text {
-    font-size: 40px;
+    font-size: 4rem;
     text-align: left;
     color: #fff; }
     .tagline__text_small {
-      font-size: 15px;
+      font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: 3px;
       margin-left: 160px;
@@ -333,7 +336,7 @@ input {
   .deal::not(::last-child) {
     padding-right: 47px; }
   .deal__headline {
-    font-size: 24px;
+    font-size: 2.4rem;
     text-align: left;
     padding-top: 64px;
     padding-bottom: 32px; }
@@ -350,12 +353,12 @@ input {
       content: url("../img/communicate-icon.png"); }
   .deal__text {
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.71;
     text-align: left;
     padding-bottom: 29px; }
   .deal__link {
-    font-size: 13px;
+    font-size: 1.3rem;
     letter-spacing: 1px;
     text-align: left;
     margin-top: auto; }
@@ -587,3 +590,23 @@ input {
       .photo-block__label_top-right::before {
         content: url("../img/label.png");
         right: 0; }
+
+.banner {
+  height: 100vh;
+  padding-top: 1px;
+  background-image: url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff; }
+  .banner__headline {
+    font-size: 4.5rem;
+    letter-spacing: -0.4px;
+    text-align: center;
+    margin-top: 4.4222222em;
+    margin-bottom: 0.8222222em; }
+  .banner__text {
+    font-size: 1.6rem;
+    line-height: 1.44;
+    letter-spacing: 0.2px;
+    text-align: center; }

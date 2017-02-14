@@ -1,4 +1,7 @@
 .document {
     font-size: 10px / 16px * 100%;
     line-height: 1.71428571;
+    @include big-desktop-up {
+        font-size: 0.625vw;
+    }
 }
