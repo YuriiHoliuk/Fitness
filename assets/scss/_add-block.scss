@@ -1,0 +1,23 @@
+.add-block {
+    &_resources {
+        flex: 0 1 32.586207%;
+    }
+    &_about {
+        flex: 0 1 38.5344828%;
+    }
+    &_social {
+        flex: 0 0 250px;
+    }
+    &__headline {
+        font-size: 1.5rem;
+        text-align: left;
+        color: #fff;
+        margin-bottom: 24px;
+    }
+    &__text {
+        font-size: 1.4rem;
+        line-height: 1.71;
+        text-align: left;
+        color: $footertextcolor;
+    }
+}

@@ -1,0 +1,11 @@
+.footer {
+    padding-top: 70px;
+    padding-bottom: 150px;
+    background-color: $footercolor;
+    &__additional {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        margin-bottom: 34px;
+    }
+}

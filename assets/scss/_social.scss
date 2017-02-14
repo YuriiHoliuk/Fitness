@@ -1,0 +1,31 @@
+.social {
+    &__link {
+        width: 51px;
+        height: 51px;
+        display: inline-block;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 35%;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        &_fb {
+            background-image: url('../img/fb.png');
+            background-color: $fbcolor;
+            background-size: 25%;
+        }
+        &_tw {
+            background-image: url('../img/tw.png');
+            background-color: $twcolor;
+        }
+        &_yt {
+            background-image: url('../img/yt.png');
+            background-color: $ytcolor;
+        }
+        &_in {
+            background-image: url('../img/in.png');
+            background-color: $incolor;
+        }
+    }
+}
