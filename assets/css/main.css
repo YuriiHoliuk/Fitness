@@ -689,7 +689,15 @@ input {
     background-color: #171a8f; }
 
 .subscribe-form {
-  margin-left: 36%; }
+  margin-left: 36%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: row;
+  -webkit-flex: row nowrap;
+      -ms-flex: row nowrap;
+          flex: row nowrap; }
   .subscribe-form__input {
     background: #fff;
     padding: 18px 10px 18px 23px;

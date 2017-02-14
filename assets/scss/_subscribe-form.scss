@@ -1,5 +1,7 @@
 .subscribe-form {
     margin-left: 36%;
+    display: flex;
+    flex: row nowrap;
     &__input {
         background: #fff;
         padding: 18px 10px 18px 23px;
