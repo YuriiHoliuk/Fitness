@@ -1,6 +1,6 @@
 .photo-block {
     display: flex;
-    background-position: 0 0;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     @for $i from 1 through 6 {

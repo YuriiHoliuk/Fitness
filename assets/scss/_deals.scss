@@ -1,0 +1,14 @@
+.deals {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 110px;
+    margin-bottom: 120px;
+    @include tablet-portrait-down {
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+    @include phone-only {
+        display: block;
+    }
+}

@@ -1,0 +1,65 @@
+.deal {
+    flex: 0 1 22.015241%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    color: #fff;
+    @include tablet-portrait-down {
+        flex-basis: 22.015241% * 2;
+        &:nth-child(n+3) {
+            margin-top: 55px;
+        }
+    }
+    @include phone-only {
+        &:nth-child(n+2) {
+            margin-top: 55px;
+        }
+    }
+    &::not(::last-child) {
+        padding-right: 47px;
+    }
+    &__headline {
+        font-size: 24px;
+        text-align: left;
+        padding-top: 64px;
+        padding-bottom: 32px;
+        @extend %before;
+        &::before {
+            top: 0;
+            left: 0;
+        }
+        &_resources {
+            &::before {
+                content: url('../img/resources_icon.png');
+            }
+        }
+        &_train {
+            &::before {
+                content: url('../img/training-icon.png')
+            }
+        }
+        &_connect {
+            &::before {
+                content: url('../img/connect-icon.png')
+            }
+        }
+        &_communicate {
+            &::before {
+                content: url('../img/communicate-icon.png')
+            }
+        }
+    }
+    &__text {
+        font-family: $secondfont;
+        font-size: 14px;
+        line-height: 1.71;
+        text-align: left;
+        padding-bottom: 29px;
+    }
+    &__link {
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-align: left;
+        margin-top: auto;
+    }
+}

@@ -1,10 +1,10 @@
-.logo, .text-block, .text-block_center .text-block__headline, .photo-block__label_drop, .photo-block__label_top-right {
+.logo, .deal__headline, .text-block, .text-block_center .text-block__headline, .photo-block__label_drop, .photo-block__label_top-right {
   position: relative; }
-  .logo::before, .text-block::before, .text-block_center .text-block__headline::before, .photo-block__label_drop::before, .photo-block__label_top-right::before {
+  .logo::before, .deal__headline::before, .text-block::before, .text-block_center .text-block__headline::before, .photo-block__label_drop::before, .photo-block__label_top-right::before {
     position: absolute;
     display: block;
     content: ''; }
-  .logo::after, .text-block::after, .text-block_center .text-block__headline::after, .photo-block__label_drop::after, .photo-block__label_top-right::after {
+  .logo::after, .deal__headline::after, .text-block::after, .text-block_center .text-block__headline::after, .photo-block__label_drop::after, .photo-block__label_top-right::after {
     position: absolute;
     display: block;
     content: ''; }
@@ -183,6 +183,7 @@ input {
   font-size: 1.4rem; }
 
 .content {
+  padding-top: 1px;
   padding-left: 8.66667%;
   padding-right: 8.66667%;
   background-image: -webkit-linear-gradient(bottom, #fd634e 0%, #fd634e 1448px, #a2ca28 1449px, #a2ca28 100%);
@@ -275,6 +276,89 @@ input {
         color: #fd634e; }
   .tagline__slash {
     color: #a2ca28; }
+
+.deals {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 110px;
+  margin-bottom: 120px; }
+  @media only screen and (max-width: 899px) {
+    .deals {
+      padding-left: 40px;
+      padding-right: 20px; } }
+  @media only screen and (max-width: 599px) {
+    .deals {
+      display: block; } }
+
+.deal {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 22.015241%;
+      -ms-flex: 0 1 22.015241%;
+          flex: 0 1 22.015241%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff; }
+  @media only screen and (max-width: 899px) {
+    .deal {
+      -webkit-flex-basis: 44.03048%;
+          -ms-flex-preferred-size: 44.03048%;
+              flex-basis: 44.03048%; }
+      .deal:nth-child(n+3) {
+        margin-top: 55px; } }
+  @media only screen and (max-width: 599px) {
+    .deal:nth-child(n+2) {
+      margin-top: 55px; } }
+  .deal::not(::last-child) {
+    padding-right: 47px; }
+  .deal__headline {
+    font-size: 24px;
+    text-align: left;
+    padding-top: 64px;
+    padding-bottom: 32px; }
+    .deal__headline::before {
+      top: 0;
+      left: 0; }
+    .deal__headline_resources::before {
+      content: url("../img/resources_icon.png"); }
+    .deal__headline_train::before {
+      content: url("../img/training-icon.png"); }
+    .deal__headline_connect::before {
+      content: url("../img/connect-icon.png"); }
+    .deal__headline_communicate::before {
+      content: url("../img/communicate-icon.png"); }
+  .deal__text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: left;
+    padding-bottom: 29px; }
+  .deal__link {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-top: auto; }
 
 .features {
   display: -webkit-box;
@@ -409,7 +493,7 @@ input {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-position: 0 0;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   .photo-block_1 {
