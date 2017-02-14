@@ -1,0 +1,13 @@
+.nav-list {
+    &__item {
+        display: inline-block;
+        padding-right: 65px;
+    }
+    &__link {
+        font-size: 13px;
+        line-height: 1.85;
+        letter-spacing: 1px;
+        text-align: right;
+        color: #fff;
+    }
+}

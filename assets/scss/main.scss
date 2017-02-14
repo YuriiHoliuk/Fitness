@@ -1,10 +1,19 @@
+//utilites
 @import 'variables';
 @import 'extend';
 @import 'mixin';
 @import 'reset';
+//base
 @import 'document';
 @import 'page';
 @import 'content';
+//header
+@import 'header';
+@import 'logo';
+@import 'mainnav';
+@import 'nav-list';
+@import 'promo';
+@import 'tagline';
 //features styles
 @import 'features';
 @import 'text-block';

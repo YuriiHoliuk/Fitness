@@ -5,6 +5,11 @@
         display: block;
         content: '';
     }
+    &::after {
+        position: absolute;
+        display: block;
+        content: '';
+    }
 }
 
 %ham {

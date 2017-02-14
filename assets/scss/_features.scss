@@ -8,6 +8,11 @@
         flex-grow: 0;
         flex-shrink: 1;
         min-height: 394px;
+        transition: all .3s;
+        &:hover {
+            box-shadow: 0 0 62px #000;
+            z-index: 2;
+        }
         &_short {
             min-height: 330px;
         }

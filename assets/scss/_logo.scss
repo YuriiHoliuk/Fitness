@@ -1,0 +1,22 @@
+.logo {
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    color: #fff;
+    margin-left: 52px;
+    // margin-top: 39px;
+    padding-top: 5px;
+    padding-left: 43px;
+    @extend %before;
+    &::before {
+        content: url('../img/logo.png');
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        height: 3px;
+        width: 38px;
+        background-color: $maincolor;
+        left: 45px;
+        top: 32px;
+    }
+}

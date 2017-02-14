@@ -1,0 +1,25 @@
+.tagline {
+    margin-top: 77.328844vh;
+    margin-left: 7.3125vh;
+    text-transform: uppercase;
+    &__text {
+        font-size: 40px;
+        // line-height: 1.75;
+        text-align: left;
+        color: #fff;
+        &_small {
+            font-size: 15px;
+            font-weight: bold;
+            // line-height: 4.67;
+            letter-spacing: 3px;
+            margin-left: 160px;
+            margin-top: 10px;
+            .tagline__slash {
+                color: $secondcolor;
+            }
+        }
+    }
+    &__slash {
+        color: $maincolor;
+    }
+}

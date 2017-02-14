@@ -1,0 +1,11 @@
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    left: 0;
+    right: 0;
+    padding-top: 39px;
+    z-index: 3;
+    text-transform: uppercase;
+}

@@ -1,12 +1,17 @@
 .content {
-    padding-left: $page-pad;
-    padding-right: $page-pad;
+    padding-left: $page-pad / 1.5;
+    padding-right: $page-pad / 1.5;
+    background-image: linear-gradient(to top, $secondcolor 0%, $secondcolor 1448px, $maincolor 1449px, $maincolor 100%);
     @include tablet-landscape-down {
-        padding-left: ($page-pad / 2);
-        padding-right: ($page-pad / 2);
+        padding-left: $page-pad / 2;
+        padding-right: $page-pad / 2;
     }
-    @include phone-only {
+    @include tablet-portrait-down {
         padding-left: 0;
         padding-right: 0;
+    }
+    @include big-desktop-up {
+        padding-left: $page-pad;
+        padding-right: $page-pad;
     }
 }

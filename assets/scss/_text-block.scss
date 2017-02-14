@@ -10,6 +10,10 @@
         }
     }
     @extend %before;
+    &::before {
+        top: 56px;
+        right: 36px;
+    }
     &_center {
         text-align: center;
         .text-block__headline {
@@ -35,27 +39,21 @@
     &_man {
         &::before {
             content: url('../img/man.png');
-            top: 56px;
-            right: 28px;
         }
     }
     &_strawberry {
         &::before {
             content: url('../img/strawberry.png');
-            top: 56px;
-            right: 47px;
         }
     }
     &_avocado {
         &::before {
             content: url('../img/avocado.png');
-            top: 56px;
-            right: 34px;
         }
     }
-    &_shadow {
-        box-shadow: 0 0 62px #000;
-    }
+    // &_shadow {
+    //     box-shadow: 0 0 62px #000;
+    // }
     &__headline {
         font-size: $head2-fz;
         font-weight: 300;
