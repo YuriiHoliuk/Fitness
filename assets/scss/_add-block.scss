@@ -1,12 +1,20 @@
 .add-block {
     &_resources {
-        flex: 0 1 32.586207%;
+        flex: 4 1 32.586207%;
+        padding-right: 40px;
+        @include tablet-portrait-down {
+            margin-bottom: 50px;
+        }
     }
     &_about {
-        flex: 0 1 38.5344828%;
+        flex: 5 1 38.5344828%;
+        padding-right: 40px;
+        @include tablet-portrait-down {
+            margin-bottom: 50px;
+        }
     }
     &_social {
-        flex: 0 0 250px;
+        flex: 3 0 250px;
     }
     &__headline {
         font-size: 1.5rem;
@@ -19,5 +27,13 @@
         line-height: 1.71;
         text-align: left;
         color: $footertextcolor;
+    }
+    @include tablet-portrait-down {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @include phone-only {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

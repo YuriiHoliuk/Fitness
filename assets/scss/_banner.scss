@@ -12,11 +12,22 @@
         text-align: center;
         margin-top: 4.4222222em;
         margin-bottom: 0.8222222em;
+        @include tablet-portrait-down {
+            font-size: 3rem;
+        }
     }
     &__text {
         font-size: 1.6rem;
         line-height: 1.44;
         letter-spacing: 0.2px;
         text-align: center;
+    }
+    @include tablet-portrait-down {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @include phone-only {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

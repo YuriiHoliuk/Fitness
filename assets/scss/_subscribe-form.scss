@@ -1,23 +1,45 @@
 .subscribe-form {
-    margin-left: 36%;
     display: flex;
-    flex: row nowrap;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    @include tablet-portrait-down {
+        flex-flow: column nowrap;
+        margin-left: 40px;
+    }
+    @include phone-only {
+        margin-left: 20px;
+    }
     &__input {
         background: #fff;
         padding: 18px 10px 18px 23px;
+        margin-right: 6px;
         border-radius: 2px;
         &::placeholder {
             font-size: 1.4rem;
             text-align: left;
             color: $placeholdercolor;
         }
+        @include tablet-portrait-down {
+            width: 60%;
+            margin-bottom: 15px;
+        }
+        @include phone-only {
+            width: 80%;
+        }
     }
     &__submit {
         background-color: $maincolor;
-        border-radius: 2px;
+        border-radius: 3px;
         padding: 17px 26px 18px 32px;
         font-size: 1.5rem;
         font-weight: bold;
         color: #fff;
+        cursor: pointer;
+        @include tablet-portrait-down {
+            width: 60%;
+        }
+        @include phone-only {
+            width: 80%;
+        }
     }
 }
