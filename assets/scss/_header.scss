@@ -2,12 +2,11 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start;
     left: 0;
     right: 0;
     padding-top: 20px; //39 original
-    padding-bottom: 20px; //0 original
-    z-index: 3;
-    background-color: rgba($secondcolor, .7);
+    padding-bottom: 25px; //0 original
+    z-index: 2;
     text-transform: uppercase;
 }

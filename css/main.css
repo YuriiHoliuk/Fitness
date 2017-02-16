@@ -207,9 +207,9 @@ input {
   left: 0;
   right: 0;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   z-index: 3;
-  background-color: rgba(253, 99, 78, 0.7);
+  background-color: #a2ca28;
   text-transform: uppercase; }
 
 .logo {
@@ -261,7 +261,7 @@ input {
       font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: 3px;
-      margin-left: 160px;
+      margin-left: 17.957351vh;
       margin-top: 10px; }
       .tagline__text_small .tagline__slash {
         color: #fd634e; }
@@ -631,6 +631,10 @@ input {
   .container {
     padding-left: 0;
     padding-right: 0; }
+  .tagline__text {
+    font-size: 3.2rem; }
+  .tagline__text_small {
+    font-size: 1.2rem; }
   .deals {
     padding-left: 40px;
     padding-right: 20px; }
