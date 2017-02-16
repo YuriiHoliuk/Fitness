@@ -11,7 +11,7 @@
         transition: all .3s;
         &:hover {
             box-shadow: 0 0 62px #000;
-            z-index: 2;
+            z-index: 1;
         }
         &_short {
             min-height: 330px;

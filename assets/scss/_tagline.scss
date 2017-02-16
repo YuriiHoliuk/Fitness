@@ -7,13 +7,19 @@
         // line-height: 1.75;
         text-align: left;
         color: #fff;
+        @include tablet-portrait-down {
+            font-size: 4rem * .8;
+        }
         &_small {
             font-size: 1.5rem;
             font-weight: bold;
             // line-height: 4.67;
             letter-spacing: 3px;
-            margin-left: 160px;
+            margin-left: 17.957351vh;
             margin-top: 10px;
+            @include tablet-portrait-down {
+                font-size: 1.5rem * .8;
+            }
             .tagline__slash {
                 color: $secondcolor;
             }

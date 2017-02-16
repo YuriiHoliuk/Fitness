@@ -200,16 +200,15 @@ input {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   left: 0;
   right: 0;
   padding-top: 20px;
-  padding-bottom: 20px;
-  z-index: 3;
-  background-color: rgba(253, 99, 78, 0.7);
+  padding-bottom: 25px;
+  z-index: 2;
   text-transform: uppercase; }
 
 .logo {
@@ -217,8 +216,9 @@ input {
   letter-spacing: 2.4px;
   color: #fff;
   margin-left: 52px;
-  padding-top: 5px;
-  padding-left: 43px; }
+  padding-bottom: 5px;
+  padding-left: 43px;
+  z-index: 3; }
   .logo::before {
     content: url("../img/logo.png");
     top: 0;
@@ -261,7 +261,7 @@ input {
       font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: 3px;
-      margin-left: 160px;
+      margin-left: 17.957351vh;
       margin-top: 10px; }
       .tagline__text_small .tagline__slash {
         color: #fd634e; }
@@ -357,7 +357,7 @@ input {
     transition: all .3s; }
     .features__block:hover {
       box-shadow: 0 0 62px #000;
-      z-index: 2; }
+      z-index: 1; }
     .features__block_short {
       min-height: 330px; }
     .features__block_small {
@@ -615,22 +615,65 @@ input {
     font-weight: bold;
     color: #fff;
     cursor: pointer; }
-  @media only screen and (min-width: 1600px) {
+
+.js-header-on-scroll {
+  background-color: rgba(13, 17, 25, 0.8); }
+
+.mobile-nav {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(13, 17, 25, 0.8); }
+  .mobile-nav .nav-list {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px; }
+    .mobile-nav .nav-list__item {
+      display: block;
+      margin-bottom: 30px; }
+    .mobile-nav .nav-list__link {
+      font-size: 3rem; }
+  .mobile-nav__line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px; }
+    .mobile-nav__line:not(:last-child) {
+      margin-bottom: 7px; }
+  .mobile-nav__show {
+    margin-right: 40px;
+    margin-top: 10px;
+    z-index: 3; }
+
+.js-hide {
+  display: none; }
+
+@media only screen and (min-width: 1600px) {
   .document {
     font-size: 0.625vw; }
   .container {
     padding-left: 13%;
     padding-right: 13%; } }
-  @media only screen and (max-width: 1199px) {
+
+@media only screen and (max-width: 1199px) {
   .container {
     padding-left: 6.5%;
     padding-right: 6.5%; }
   .features__block_big, .features__block_small {
     width: 50%; } }
-  @media only screen and (max-width: 899px) {
+
+@media only screen and (max-width: 899px) {
   .container {
     padding-left: 0;
     padding-right: 0; }
+  .tagline__text {
+    font-size: 3.2rem; }
+  .tagline__text_small {
+    font-size: 1.2rem; }
   .deals {
     padding-left: 40px;
     padding-right: 20px; }
@@ -734,7 +777,8 @@ input {
     margin-bottom: 15px; }
   .subscribe-form__submit {
     width: 60%; } }
-  @media only screen and (max-width: 599px) {
+
+@media only screen and (max-width: 599px) {
   .deals {
     display: block; }
   .deal:nth-child(n+2) {

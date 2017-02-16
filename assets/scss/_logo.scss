@@ -4,8 +4,9 @@
     color: #fff;
     margin-left: 52px;
     // margin-top: 39px;
-    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 43px;
+    z-index: 3;
     @extend %before;
     &::before {
         content: url('../img/logo.png');

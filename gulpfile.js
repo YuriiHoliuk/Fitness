@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     postcss = require('gulp-postcss'),
     mqpacker = require("css-mqpacker"),
+    rigger = require('gulp-rigger'),
     htmlmin = require('gulp-htmlmin');
 
 
@@ -49,9 +50,9 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src([])
-        .pipe(concat('libs.min.js'))
-        .pipe(uglify())
+    return gulp.src(['assets/libs/jquery/dist/jquery.js'])
+        .pipe(concat('libs.js'))
+        // .pipe(uglify())
         .pipe(gulp.dest('assets/js'));
 });
 
@@ -62,10 +63,10 @@ gulp.task('css-min', ['sass'], function() {
         .pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('watch', ['browser-sync', 'sass'], function() {
-    gulp.watch(['assets/scss/**/*.scss'], ['sass']);
+gulp.task('watch', ['browser-sync', 'html', 'sass'], function() {
+    gulp.watch(['assets/scss/**/*.scss'], ['sass', browserSync.reload]);
     gulp.watch('assets/**/*.html', ['html', browserSync.reload]);
-    gulp.watch('assets/js/**/*.js', browserSync.reload);
+    gulp.watch('assets/js/**/*.js', browserSync.reload({ stream: true }));
 });
 
 gulp.task('clean', function() {
