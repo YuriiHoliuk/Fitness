@@ -2,6 +2,10 @@
     background-color: rgba($footercolor, .8);
 }
 
+.js-header-solid {
+    background-color: $footercolor;
+}
+
 .mobile-nav {
     position: fixed;
     display: none;
@@ -9,19 +13,9 @@
     bottom: 0;
     left: 0;
     right: 0;
+    padding-top: 100px;
     background-color: rgba($footercolor, .8);
-    .nav-list {
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 100px;
-        &__item {
-            display: block;
-            margin-bottom: 30px;
-        }
-        &__link {
-            font-size: 3rem;
-        }
-    }
+    overflow: auto;
     &__line {
         display: block;
         width: 30px;
@@ -36,6 +30,33 @@
         margin-right: 40px;
         margin-top: 10px;
         z-index: 3;
+    }
+}
+
+.mobile-nav-list {
+    padding: 0 50px;
+    &__item {
+        display: block;
+        @extend %before;
+        &::after {
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background-color: $maincolor;
+            transition: all .5s;
+        }
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+    &__link {
+        display: block;
+        font-size: 2.5rem;
+        padding: 30px 15px 20px 5px;
+        color: #fff;
     }
 }
 
