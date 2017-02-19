@@ -74,6 +74,23 @@
     }
     &__more {
         color: $maincolor;
-        border-bottom: 1px solid $maincolor;
+        @extend %before;
+        &::after {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            width: 100%;
+            background-color: $maincolor;
+            transition: all .5s;
+        }
+        &:hover {
+            &::after {
+                width: 0;
+            }
+        }
+        &:active {
+            color: darken($secondcolor, 20%);
+        }
     }
 }

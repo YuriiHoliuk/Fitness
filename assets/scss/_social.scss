@@ -5,26 +5,33 @@
         display: inline-block;
         border-radius: 50%;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center, 50% 200%;
         background-size: 35%;
+        transition: background-position .5s, box-shadow .1s;
+        &:hover {
+            background-position: 50% -100%, center;
+        }
+        &:active {
+            box-shadow: 2px 2px 6px #fff, -2px -2px 6px #fff;
+        }
         &:not(:last-child) {
             margin-right: 10px;
         }
         &_fb {
-            background-image: url('../img/fb.png');
+            background-image: url('../img/fb.png'), url('../img/fb__hover.png');
             background-color: $fbcolor;
             background-size: 25%;
         }
         &_tw {
-            background-image: url('../img/tw.png');
+            background-image: url('../img/tw.png'), url('../img/tw__hover.png');
             background-color: $twcolor;
         }
         &_yt {
-            background-image: url('../img/yt.png');
+            background-image: url('../img/yt.png'), url('../img/yt__hover.png');
             background-color: $ytcolor;
         }
         &_in {
-            background-image: url('../img/in.png');
+            background-image: url('../img/in.png'), url('../img/in__hover.png');
             background-color: $incolor;
         }
     }

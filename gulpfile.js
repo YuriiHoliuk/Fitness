@@ -64,7 +64,7 @@ gulp.task('css-min', ['sass'], function() {
 });
 
 gulp.task('watch', ['browser-sync', 'html', 'sass'], function() {
-    gulp.watch(['assets/scss/**/*.scss'], ['sass', browserSync.reload]);
+    gulp.watch(['assets/scss/**/*.scss'], ['sass']);
     gulp.watch('assets/**/*.html', ['html', browserSync.reload]);
     gulp.watch('assets/js/**/*.js', browserSync.reload({ stream: true }));
 });
