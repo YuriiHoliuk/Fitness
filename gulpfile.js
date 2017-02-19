@@ -74,11 +74,11 @@ gulp.task('clean', function() {
 });
 
 gulp.task('img', function() {
-    return gulp.src('assets/img/**/*.*')
+    return gulp.src('assets/img/**/*.+(jpg|png|svg)')
         .pipe(imagemin({
             interlaced: true,
             progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
+            svgoPlugins: [{ removeViewBox: true }],
             use: [pngquant()]
         }))
         .pipe(gulp.dest('img'));

@@ -307,7 +307,7 @@ input {
   .nav-list__link::after {
     bottom: 0;
     left: 0;
-    height: 3px;
+    height: 2px;
     width: 0;
     background-color: #a2ca28;
     -webkit-transition: all .5s;
