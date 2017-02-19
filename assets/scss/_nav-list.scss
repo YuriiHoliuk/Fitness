@@ -9,5 +9,23 @@
         letter-spacing: 1px;
         text-align: right;
         color: #fff;
+        padding-bottom: 5px;
+        @extend %before;
+        &::after {
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 0;
+            background-color: $maincolor;
+            transition: all .5s;
+        }
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+        &:active {
+            color: $secondcolor;
+        }
     }
 }

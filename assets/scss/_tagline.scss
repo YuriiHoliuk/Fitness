@@ -2,6 +2,9 @@
     margin-top: 77.328844vh;
     margin-left: 7.3125vh;
     text-transform: uppercase;
+    @include tablet-portrait-down {
+        margin-top: 70vh;
+    }
     &__text {
         font-size: 4rem;
         // line-height: 1.75;

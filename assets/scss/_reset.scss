@@ -144,6 +144,18 @@ a {
     color: inherit;
 }
 
+a,
+a:hover,
+a:active,
+a:visited,
+button,
+button:hover,
+button:active,
+button:visited {
+    outline: none;
+    border: none;
+}
+
 button {
     border: none;
     background: none;
