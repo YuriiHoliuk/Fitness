@@ -25,7 +25,7 @@ gulp.task('generate-favicon', function(done) {
     realFavicon.generateFavicon({
         masterPicture: './assets/img/favicon.png',
         dest: './assets',
-        iconsPath: './assets',
+        iconsPath: '',
         design: {
             ios: {
                 pictureAspect: 'backgroundAndMargin',
