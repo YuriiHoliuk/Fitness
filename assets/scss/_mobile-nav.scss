@@ -1,26 +1,55 @@
 .mobile-nav {
     position: fixed;
-    display: none;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    padding-top: 100px;
-    background-color: rgba($footercolor, .8);
+
+    display: none;
     overflow: auto;
-    &__list {
-        padding: 0 50px;
+
+    padding-top: 100px;
+
+    border-top: 1px soli transparent;
+    background-color: rgba($footercolor, .8);
+    &__toggle {
+        z-index: 3;
+
+        margin-top: 10px;
+        margin-right: 40px;
+
+        cursor: pointer;
     }
+    &__line {
+        display: block;
+
+        width: 30px;
+        height: 3px;
+
+        border-radius: 2px;
+        background-color: #fff;
+        &:not(:last-child) {
+            margin-bottom: 7px;
+        }
+    }
+}
+
+.mobile-nav .nav-list {
+    padding: 0 50px;
     &__item {
         display: block;
+
         @extend %before;
         &::after {
             bottom: 0;
             left: 0;
-            height: 2px;
+
             width: 0;
-            background-color: $maincolor;
+            height: 2px;
+
             transition: all .5s;
+
+            background-color: $maincolor;
         }
         &:hover {
             &::after {
@@ -29,28 +58,15 @@
         }
     }
     &__link {
-        display: block;
         font-size: 2.5rem;
+
+        display: block;
+
         padding: 30px 15px 20px 5px;
+
         color: #fff;
         &:active {
             color: $secondcolor;
-        }
-    }
-    &__toggle {
-        margin-right: 40px;
-        margin-top: 10px;
-        cursor: pointer;
-        z-index: 3;
-    }
-    &__line {
-        display: block;
-        width: 30px;
-        height: 3px;
-        background-color: #fff;
-        border-radius: 2px;
-        &:not(:last-child) {
-            margin-bottom: 7px;
         }
     }
 }

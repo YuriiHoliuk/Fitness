@@ -1,23 +1,31 @@
-.nav-list {
+    .desktop-nav .nav-list {
     &__item {
         display: inline-block;
+
         padding-right: 65px;
     }
     &__link {
         font-size: 1.3rem;
         line-height: 1.85;
-        letter-spacing: 1px;
-        text-align: right;
-        color: #fff;
+
         padding-bottom: 5px;
+
+        text-align: right;
+        letter-spacing: 1px;
+
+        color: #fff;
+
         @extend %before;
         &::after {
             bottom: 0;
             left: 0;
-            height: 2px;
+
             width: 0;
-            background-color: $maincolor;
+            height: 2px;
+
             transition: all .5s;
+
+            background-color: $maincolor;
         }
         &:hover {
             &::after {
