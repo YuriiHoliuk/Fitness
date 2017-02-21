@@ -50,9 +50,9 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src(['assets/libs/jquery/dist/jquery.js'])
-        .pipe(concat('libs.js'))
-        // .pipe(uglify())
+    return gulp.src(['assets/js/main.js'])
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('assets/js'));
 });
 
@@ -63,10 +63,10 @@ gulp.task('css-min', ['sass'], function() {
         .pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('watch', ['browser-sync', 'html', 'sass'], function() {
+gulp.task('watch', ['browser-sync', 'html', 'sass', 'scripts'], function() {
     gulp.watch(['assets/scss/**/*.scss'], ['sass']);
     gulp.watch('assets/**/*.html', ['html', browserSync.reload]);
-    gulp.watch('assets/js/**/*.js', browserSync.reload({ stream: true }));
+    gulp.watch('assets/js/**/*.js', ['scripts', browserSync.reload({ stream: true })]);
 });
 
 gulp.task('clean', function() {
@@ -101,7 +101,7 @@ gulp.task('buildFonts', function() {
 })
 
 gulp.task('buildJs', function() {
-    return gulp.src(['assets/js/*.js'])
+    return gulp.src(['assets/js/*.min.js'])
         .pipe(gulp.dest('js/'))
 })
 
@@ -111,7 +111,7 @@ gulp.task('buildImg', function() {
 })
 
 
-gulp.task('build', ['css-min', 'clean', 'img', 'buildHtml', 'buildCss', 'buildJs', 'buildFonts'])
+gulp.task('build', ['clean', 'css-min', 'scripts', 'html', 'img', 'buildHtml', 'buildCss', 'buildJs', 'buildFonts'])
 
 gulp.task('clear', function() {
     return cache.clearAll();

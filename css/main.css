@@ -203,10 +203,16 @@ input {
 
 .header {
   position: fixed;
+  z-index: 2;
+  right: 0;
+  left: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  text-transform: uppercase;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -214,13 +220,7 @@ input {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
-          align-items: flex-start;
-  left: 0;
-  right: 0;
-  padding-top: 20px;
-  padding-bottom: 25px;
-  z-index: 2;
-  text-transform: uppercase; }
+          align-items: flex-start; }
 
 #top {
   position: absolute;
@@ -432,19 +432,19 @@ input {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; }
   .features__block {
+    min-height: 394px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
     -webkit-flex-shrink: 1;
         -ms-flex-negative: 1;
-            flex-shrink: 1;
-    min-height: 394px;
-    -webkit-transition: all .3s;
-    transition: all .3s; }
+            flex-shrink: 1; }
     .features__block:hover {
-      box-shadow: 0 0 62px #000;
-      z-index: 1; }
+      z-index: 1;
+      box-shadow: 0 0 62px #000; }
     .features__block_short {
       min-height: 330px; }
     .features__block_small {
@@ -618,18 +618,18 @@ input {
     margin-bottom: 34px; }
 
 .add-block_resources {
+  padding-right: 40px;
   -webkit-box-flex: 4;
   -webkit-flex: 4 1 32.586207%;
       -ms-flex: 4 1 32.586207%;
-          flex: 4 1 32.586207%;
-  padding-right: 40px; }
+          flex: 4 1 32.586207%; }
 
 .add-block_about {
+  padding-right: 40px;
   -webkit-box-flex: 5;
   -webkit-flex: 5 1 38.5344828%;
       -ms-flex: 5 1 38.5344828%;
-          flex: 5 1 38.5344828%;
-  padding-right: 40px; }
+          flex: 5 1 38.5344828%; }
 
 .add-block_social {
   -webkit-box-flex: 3;
@@ -639,9 +639,9 @@ input {
 
 .add-block__headline {
   font-size: 1.5rem;
+  margin-bottom: 24px;
   text-align: left;
-  color: #fff;
-  margin-bottom: 24px; }
+  color: #fff; }
 
 .add-block__text {
   font-size: 1.4rem;
@@ -847,13 +847,13 @@ input {
     padding-right: 40px; }
   .footer__additional {
     display: block; }
+  .add-block {
+    padding-right: 40px;
+    padding-left: 40px; }
   .add-block_resources {
     margin-bottom: 50px; }
   .add-block_about {
     margin-bottom: 50px; }
-  .add-block {
-    padding-left: 40px;
-    padding-right: 40px; }
   .subscribe-form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -876,8 +876,8 @@ input {
     padding-left: 20px;
     padding-right: 20px; }
   .add-block {
-    padding-left: 20px;
-    padding-right: 20px; }
+    padding-right: 20px;
+    padding-left: 20px; }
   .subscribe-form {
     margin-left: 20px; }
   .subscribe-form__input {
