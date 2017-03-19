@@ -2,7 +2,7 @@
 
 [Preview this project](https://yuriiholiuk.github.io/Fitness/)
 
-##Tasks
+## Tasks
 * minimize images
 * form validation
 * use svg
